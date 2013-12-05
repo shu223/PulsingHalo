@@ -53,7 +53,7 @@ Use `animationDuration` or `pulseInterval` property.
 
 You can try to change radius and color properties with demo app.
 
-![](http://f.cl.ly/items/122U0f2f2F2e3r0W0r2J/beacon_demo2.jpg)
+![](http://f.cl.ly/items/031W0P1T190q382P063m/beacon_demo3.jpg)
 
 
 ##Special Thanks
