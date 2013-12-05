@@ -21,6 +21,7 @@
 		8AC907361850659E00A74F2E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC907181850659E00A74F2E /* UIKit.framework */; };
 		8AC9073E1850659E00A74F2E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8AC9073C1850659E00A74F2E /* InfoPlist.strings */; };
 		8AC907401850659E00A74F2E /* PulsingHaloDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9073F1850659E00A74F2E /* PulsingHaloDemoTests.m */; };
+		8AC9074C185065DB00A74F2E /* PulsingHaloLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9074B185065DB00A74F2E /* PulsingHaloLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		8AC9073B1850659E00A74F2E /* PulsingHaloDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PulsingHaloDemoTests-Info.plist"; sourceTree = "<group>"; };
 		8AC9073D1850659E00A74F2E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8AC9073F1850659E00A74F2E /* PulsingHaloDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PulsingHaloDemoTests.m; sourceTree = "<group>"; };
+		8AC9074A185065DB00A74F2E /* PulsingHaloLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PulsingHaloLayer.h; sourceTree = "<group>"; };
+		8AC9074B185065DB00A74F2E /* PulsingHaloLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PulsingHaloLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,7 @@
 		8AC907081850659E00A74F2E = {
 			isa = PBXGroup;
 			children = (
+				8AC90749185065DB00A74F2E /* PulsingHalo */,
 				8AC9071A1850659E00A74F2E /* PulsingHaloDemo */,
 				8AC907391850659E00A74F2E /* PulsingHaloDemoTests */,
 				8AC907131850659E00A74F2E /* Frameworks */,
@@ -150,6 +154,15 @@
 				8AC9073C1850659E00A74F2E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8AC90749185065DB00A74F2E /* PulsingHalo */ = {
+			isa = PBXGroup;
+			children = (
+				8AC9074A185065DB00A74F2E /* PulsingHaloLayer.h */,
+				8AC9074B185065DB00A74F2E /* PulsingHaloLayer.m */,
+			);
+			path = PulsingHalo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AC9074C185065DB00A74F2E /* PulsingHaloLayer.m in Sources */,
 				8AC9072B1850659E00A74F2E /* ViewController.m in Sources */,
 				8AC907251850659E00A74F2E /* AppDelegate.m in Sources */,
 				8AC907211850659E00A74F2E /* main.m in Sources */,
