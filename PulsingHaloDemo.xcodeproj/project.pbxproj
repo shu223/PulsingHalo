@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8AC907151850659E00A74F2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC907141850659E00A74F2E /* Foundation.framework */; };
+		8AC907171850659E00A74F2E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC907161850659E00A74F2E /* CoreGraphics.framework */; };
+		8AC907191850659E00A74F2E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC907181850659E00A74F2E /* UIKit.framework */; };
+		8AC9071F1850659E00A74F2E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8AC9071D1850659E00A74F2E /* InfoPlist.strings */; };
+		8AC907211850659E00A74F2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC907201850659E00A74F2E /* main.m */; };
+		8AC907251850659E00A74F2E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC907241850659E00A74F2E /* AppDelegate.m */; };
+		8AC907281850659E00A74F2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AC907261850659E00A74F2E /* Main.storyboard */; };
+		8AC9072B1850659E00A74F2E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9072A1850659E00A74F2E /* ViewController.m */; };
+		8AC9072D1850659E00A74F2E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AC9072C1850659E00A74F2E /* Images.xcassets */; };
+		8AC907341850659E00A74F2E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC907331850659E00A74F2E /* XCTest.framework */; };
+		8AC907351850659E00A74F2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC907141850659E00A74F2E /* Foundation.framework */; };
+		8AC907361850659E00A74F2E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC907181850659E00A74F2E /* UIKit.framework */; };
+		8AC9073E1850659E00A74F2E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8AC9073C1850659E00A74F2E /* InfoPlist.strings */; };
+		8AC907401850659E00A74F2E /* PulsingHaloDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9073F1850659E00A74F2E /* PulsingHaloDemoTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8AC907371850659E00A74F2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AC907091850659E00A74F2E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8AC907101850659E00A74F2E;
+			remoteInfo = PulsingHaloDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8AC907111850659E00A74F2E /* PulsingHaloDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PulsingHaloDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AC907141850659E00A74F2E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8AC907161850659E00A74F2E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8AC907181850659E00A74F2E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8AC9071C1850659E00A74F2E /* PulsingHaloDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PulsingHaloDemo-Info.plist"; sourceTree = "<group>"; };
+		8AC9071E1850659E00A74F2E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8AC907201850659E00A74F2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8AC907221850659E00A74F2E /* PulsingHaloDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PulsingHaloDemo-Prefix.pch"; sourceTree = "<group>"; };
+		8AC907231850659E00A74F2E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8AC907241850659E00A74F2E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8AC907271850659E00A74F2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8AC907291850659E00A74F2E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8AC9072A1850659E00A74F2E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8AC9072C1850659E00A74F2E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8AC907321850659E00A74F2E /* PulsingHaloDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PulsingHaloDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AC907331850659E00A74F2E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		8AC9073B1850659E00A74F2E /* PulsingHaloDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PulsingHaloDemoTests-Info.plist"; sourceTree = "<group>"; };
+		8AC9073D1850659E00A74F2E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8AC9073F1850659E00A74F2E /* PulsingHaloDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PulsingHaloDemoTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8AC9070E1850659E00A74F2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AC907171850659E00A74F2E /* CoreGraphics.framework in Frameworks */,
+				8AC907191850659E00A74F2E /* UIKit.framework in Frameworks */,
+				8AC907151850659E00A74F2E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AC9072F1850659E00A74F2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AC907341850659E00A74F2E /* XCTest.framework in Frameworks */,
+				8AC907361850659E00A74F2E /* UIKit.framework in Frameworks */,
+				8AC907351850659E00A74F2E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8AC907081850659E00A74F2E = {
+			isa = PBXGroup;
+			children = (
+				8AC9071A1850659E00A74F2E /* PulsingHaloDemo */,
+				8AC907391850659E00A74F2E /* PulsingHaloDemoTests */,
+				8AC907131850659E00A74F2E /* Frameworks */,
+				8AC907121850659E00A74F2E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8AC907121850659E00A74F2E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8AC907111850659E00A74F2E /* PulsingHaloDemo.app */,
+				8AC907321850659E00A74F2E /* PulsingHaloDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8AC907131850659E00A74F2E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8AC907141850659E00A74F2E /* Foundation.framework */,
+				8AC907161850659E00A74F2E /* CoreGraphics.framework */,
+				8AC907181850659E00A74F2E /* UIKit.framework */,
+				8AC907331850659E00A74F2E /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8AC9071A1850659E00A74F2E /* PulsingHaloDemo */ = {
+			isa = PBXGroup;
+			children = (
+				8AC907231850659E00A74F2E /* AppDelegate.h */,
+				8AC907241850659E00A74F2E /* AppDelegate.m */,
+				8AC907261850659E00A74F2E /* Main.storyboard */,
+				8AC907291850659E00A74F2E /* ViewController.h */,
+				8AC9072A1850659E00A74F2E /* ViewController.m */,
+				8AC9072C1850659E00A74F2E /* Images.xcassets */,
+				8AC9071B1850659E00A74F2E /* Supporting Files */,
+			);
+			path = PulsingHaloDemo;
+			sourceTree = "<group>";
+		};
+		8AC9071B1850659E00A74F2E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8AC9071C1850659E00A74F2E /* PulsingHaloDemo-Info.plist */,
+				8AC9071D1850659E00A74F2E /* InfoPlist.strings */,
+				8AC907201850659E00A74F2E /* main.m */,
+				8AC907221850659E00A74F2E /* PulsingHaloDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8AC907391850659E00A74F2E /* PulsingHaloDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				8AC9073F1850659E00A74F2E /* PulsingHaloDemoTests.m */,
+				8AC9073A1850659E00A74F2E /* Supporting Files */,
+			);
+			path = PulsingHaloDemoTests;
+			sourceTree = "<group>";
+		};
+		8AC9073A1850659E00A74F2E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8AC9073B1850659E00A74F2E /* PulsingHaloDemoTests-Info.plist */,
+				8AC9073C1850659E00A74F2E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8AC907101850659E00A74F2E /* PulsingHaloDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AC907431850659E00A74F2E /* Build configuration list for PBXNativeTarget "PulsingHaloDemo" */;
+			buildPhases = (
+				8AC9070D1850659E00A74F2E /* Sources */,
+				8AC9070E1850659E00A74F2E /* Frameworks */,
+				8AC9070F1850659E00A74F2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PulsingHaloDemo;
+			productName = PulsingHaloDemo;
+			productReference = 8AC907111850659E00A74F2E /* PulsingHaloDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8AC907311850659E00A74F2E /* PulsingHaloDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AC907461850659E00A74F2E /* Build configuration list for PBXNativeTarget "PulsingHaloDemoTests" */;
+			buildPhases = (
+				8AC9072E1850659E00A74F2E /* Sources */,
+				8AC9072F1850659E00A74F2E /* Frameworks */,
+				8AC907301850659E00A74F2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8AC907381850659E00A74F2E /* PBXTargetDependency */,
+			);
+			name = PulsingHaloDemoTests;
+			productName = PulsingHaloDemoTests;
+			productReference = 8AC907321850659E00A74F2E /* PulsingHaloDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8AC907091850659E00A74F2E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Shuichi Tsutsumi";
+				TargetAttributes = {
+					8AC907311850659E00A74F2E = {
+						TestTargetID = 8AC907101850659E00A74F2E;
+					};
+				};
+			};
+			buildConfigurationList = 8AC9070C1850659E00A74F2E /* Build configuration list for PBXProject "PulsingHaloDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8AC907081850659E00A74F2E;
+			productRefGroup = 8AC907121850659E00A74F2E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8AC907101850659E00A74F2E /* PulsingHaloDemo */,
+				8AC907311850659E00A74F2E /* PulsingHaloDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8AC9070F1850659E00A74F2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AC9072D1850659E00A74F2E /* Images.xcassets in Resources */,
+				8AC9071F1850659E00A74F2E /* InfoPlist.strings in Resources */,
+				8AC907281850659E00A74F2E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AC907301850659E00A74F2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AC9073E1850659E00A74F2E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8AC9070D1850659E00A74F2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AC9072B1850659E00A74F2E /* ViewController.m in Sources */,
+				8AC907251850659E00A74F2E /* AppDelegate.m in Sources */,
+				8AC907211850659E00A74F2E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AC9072E1850659E00A74F2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AC907401850659E00A74F2E /* PulsingHaloDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8AC907381850659E00A74F2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8AC907101850659E00A74F2E /* PulsingHaloDemo */;
+			targetProxy = 8AC907371850659E00A74F2E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8AC9071D1850659E00A74F2E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AC9071E1850659E00A74F2E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8AC907261850659E00A74F2E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AC907271850659E00A74F2E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8AC9073C1850659E00A74F2E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AC9073D1850659E00A74F2E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8AC907411850659E00A74F2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8AC907421850659E00A74F2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8AC907441850659E00A74F2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PulsingHaloDemo/PulsingHaloDemo-Prefix.pch";
+				INFOPLIST_FILE = "PulsingHaloDemo/PulsingHaloDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8AC907451850659E00A74F2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PulsingHaloDemo/PulsingHaloDemo-Prefix.pch";
+				INFOPLIST_FILE = "PulsingHaloDemo/PulsingHaloDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		8AC907471850659E00A74F2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PulsingHaloDemo.app/PulsingHaloDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PulsingHaloDemo/PulsingHaloDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "PulsingHaloDemoTests/PulsingHaloDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		8AC907481850659E00A74F2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PulsingHaloDemo.app/PulsingHaloDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PulsingHaloDemo/PulsingHaloDemo-Prefix.pch";
+				INFOPLIST_FILE = "PulsingHaloDemoTests/PulsingHaloDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8AC9070C1850659E00A74F2E /* Build configuration list for PBXProject "PulsingHaloDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AC907411850659E00A74F2E /* Debug */,
+				8AC907421850659E00A74F2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8AC907431850659E00A74F2E /* Build configuration list for PBXNativeTarget "PulsingHaloDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AC907441850659E00A74F2E /* Debug */,
+				8AC907451850659E00A74F2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8AC907461850659E00A74F2E /* Build configuration list for PBXNativeTarget "PulsingHaloDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AC907471850659E00A74F2E /* Debug */,
+				8AC907481850659E00A74F2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8AC907091850659E00A74F2E /* Project object */;
+}
