@@ -1,14 +1,15 @@
 PulsingHalo
 ===========
 
-A CALayer subclass for indicating Pulsing Halo.
+iOS Component For Creating A Pulsing Animation.
 
 ![](http://f.cl.ly/items/220D2F210D1x1D0L1Q20/beacon__.gif)
 
-It's useful for:
+Great For  And Beacons:
 
-- **iBeacon**
-- annotions in MapKit
+- **Beacons for iBeacon**
+- Map Annotations
+
 
 ##How to use
 
