@@ -22,6 +22,21 @@ halo.position = self.view.center;
 [self.view.layer addSublayer:halo];
 ````
 
+##Install with CocoaPods
+
+Add Podfile.
+
+````
+pod "PulsingHalo"
+````
+
+And
+
+````
+$ pod install
+````
+
+
 ##Customization
 
 ###radius
