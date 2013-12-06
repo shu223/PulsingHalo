@@ -1,6 +1,6 @@
 //
-//  PulsingLayer.h
-//  BeaconAnimationDemo
+//  PulsingHaloLayer.h
+//  https://github.com/shu223/PulsingHalo
 //
 //  Created by shuichi on 12/5/13.
 //  Copyright (c) 2013 Shuichi Tsutsumi. All rights reserved.
