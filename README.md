@@ -5,7 +5,7 @@ iOS Component For Creating A Pulsing Animation.
 
 ![](http://f.cl.ly/items/220D2F210D1x1D0L1Q20/beacon__.gif)
 
-Great For  And Beacons:
+Great For:
 
 - **Beacons for iBeacon**
 - Map Annotations
@@ -67,7 +67,7 @@ Use `animationDuration` or `pulseInterval` property.
 
 ##Demo
 
-You can try to change radius and color properties with demo app.
+You can try to change the radius and color properties with demo app.
 
 ![](http://f.cl.ly/items/031W0P1T190q382P063m/beacon_demo3.jpg)
 
