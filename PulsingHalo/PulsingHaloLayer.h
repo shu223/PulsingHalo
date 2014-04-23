@@ -13,8 +13,9 @@
 
 @interface PulsingHaloLayer : CALayer
 
-@property (nonatomic, assign) CGFloat radius;                   // default:60pt
-@property (nonatomic, assign) NSTimeInterval animationDuration; // default:3s
-@property (nonatomic, assign) NSTimeInterval pulseInterval; // default is 0s
+@property (nonatomic, assign) CGFloat radius;                   // default: 60pt
+@property (nonatomic, assign) NSTimeInterval animationDuration; // default: 3s
+@property (nonatomic, assign) NSTimeInterval pulseInterval;     // default: 0s
+@property (nonatomic, assign) CGFloat repeatCount;              // default: INFINITY
 
 @end
