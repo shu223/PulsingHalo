@@ -29,6 +29,7 @@
         self.radius = 60;
         self.animationDuration = 3;
         self.pulseInterval = 0;
+        self.repeatCount = INFINITY;
         self.backgroundColor = [[UIColor colorWithRed:0.000 green:0.478 blue:1.000 alpha:1] CGColor];
 
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
@@ -66,7 +67,7 @@
     
     self.animationGroup = [CAAnimationGroup animation];
     self.animationGroup.duration = self.animationDuration + self.pulseInterval;
-    self.animationGroup.repeatCount = INFINITY;
+    self.animationGroup.repeatCount = self.repeatCount;
     self.animationGroup.removedOnCompletion = NO;
     self.animationGroup.timingFunction = defaultCurve;
     
