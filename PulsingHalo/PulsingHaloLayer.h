@@ -18,4 +18,6 @@
 @property (nonatomic, assign) NSTimeInterval pulseInterval;     // default: 0s
 @property (nonatomic, assign) CGFloat repeatCount;              // default: INFINITY
 
+- (id)initWithRepeatCount:(CGFloat) repeatCount;
+
 @end

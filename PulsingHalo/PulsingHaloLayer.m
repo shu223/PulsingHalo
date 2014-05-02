@@ -18,34 +18,39 @@
 
 @implementation PulsingHaloLayer
 
+- (id)initWithRepeatCount:(CGFloat) repeatCount
+{
+  self = [super init];
+  if (self) {
+    self.contentsScale = [UIScreen mainScreen].scale;
+    self.opacity = 0;
+  
+    // default
+    self.radius = 60;
+    self.animationDuration = 3;
+    self.pulseInterval = 0;
+    self.repeatCount = repeatCount;
+    self.backgroundColor = [[UIColor colorWithRed:0.000 green:0.478 blue:1.000 alpha:1] CGColor];
+
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
+      
+        [self setupAnimationGroup];
+
+        if(self.pulseInterval != INFINITY) {
+          
+            dispatch_async(dispatch_get_main_queue(), ^(void) {
+              
+                [self addAnimation:self.animationGroup forKey:@"pulse"];
+            });
+        }
+    });
+  }
+  return self;
+  
+}
+
 - (id)init {
-    self = [super init];
-    if (self) {
-        
-        self.contentsScale = [UIScreen mainScreen].scale;
-        self.opacity = 0;
-        
-        // default
-        self.radius = 60;
-        self.animationDuration = 3;
-        self.pulseInterval = 0;
-        self.repeatCount = INFINITY;
-        self.backgroundColor = [[UIColor colorWithRed:0.000 green:0.478 blue:1.000 alpha:1] CGColor];
-
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
-            
-            [self setupAnimationGroup];
-
-            if(self.pulseInterval != INFINITY) {
-                
-                dispatch_async(dispatch_get_main_queue(), ^(void) {
-                    
-                    [self addAnimation:self.animationGroup forKey:@"pulse"];
-                });
-            }
-        });
-    }
-    return self;
+    return [self initWithRepeatCount:INFINITY];
 }
 
 - (void)setRadius:(CGFloat)radius {
