@@ -18,7 +18,7 @@
 
 @implementation PulsingHaloLayer
 
-- (id)initWithRepeatCount:(CGFloat) repeatCount
+- (id)initWithRepeatCount:(float)repeatCount
 {
   self = [super init];
   if (self) {
