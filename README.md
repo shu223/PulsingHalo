@@ -65,6 +65,16 @@ self.halo.backgroundColor = color.CGColor;
 Use `animationDuration` or `pulseInterval` property.
 
 
+###animation repeat count
+
+Initialize using `initWithRepeatCount:` method, or set `repeatCount` property. The default value is `INFINITY`.
+
+
+###animation key values and times
+
+Use properties `fromValueForRadius`, `fromValueForAlpha` and `keyTimeForHalfOpacity`.
+
+
 ##Demo
 
 You can try to change the radius and color properties with demo app.
@@ -74,4 +84,5 @@ You can try to change the radius and color properties with demo app.
 
 ##Special Thanks
 
-It's inspired by [SVPulsingAnnotationView](https://github.com/samvermette/SVPulsingAnnotationView).
+Inspired by [SVPulsingAnnotationView](https://github.com/samvermette/SVPulsingAnnotationView).
+
