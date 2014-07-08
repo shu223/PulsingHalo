@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A3017" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,7 +17,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="b02-F2-S1G">
-                                <rect key="frame" x="134" y="141" width="50" height="50"/>
+                                <rect key="frame" x="55" y="141" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="urQ-AR-AKo">
+                                <rect key="frame" x="215" y="141" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="AGT-ka-xWt">
@@ -111,6 +115,7 @@
                         <outlet property="bLabel" destination="Cr8-K3-bbK" id="bnR-Cq-Ix7"/>
                         <outlet property="bSlider" destination="Wh3-AW-Xwr" id="wSf-0R-oMf"/>
                         <outlet property="beaconView" destination="b02-F2-S1G" id="J6u-U8-tkr"/>
+                        <outlet property="beaconViewMuti" destination="urQ-AR-AKo" id="MJg-z7-lol"/>
                         <outlet property="gLabel" destination="16G-0A-ZRR" id="ZcK-ES-G54"/>
                         <outlet property="gSlider" destination="2mN-dD-yv5" id="2My-xV-6nP"/>
                         <outlet property="rLabel" destination="byo-ur-zAu" id="rdc-zc-0qO"/>
@@ -121,6 +126,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="412" y="76"/>
         </scene>
     </scenes>
     <resources>
