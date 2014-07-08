@@ -43,8 +43,9 @@
     [self.view.layer insertSublayer:self.halo below:self.beaconView.layer];
 
     ///setup multiple halo layer
-    MultiplePulsingHaloLayer *mutiLayer = [[MultiplePulsingHaloLayer alloc] initWithHaloLayerNum:3 andStartInterval:1];
-    self.mutiHalo = mutiLayer;
+    //you can specify the number of halos by initial method or by instance property "haloLayerNumber"
+    MultiplePulsingHaloLayer *multiLayer = [[MultiplePulsingHaloLayer alloc] initWithHaloLayerNum:3 andStartInterval:1];
+    self.mutiHalo = multiLayer;
     self.mutiHalo.position = self.beaconViewMuti.center;
     self.mutiHalo.useTimingFunction = NO;
     [self.mutiHalo buildSublayers];
