@@ -22,6 +22,7 @@
 		8AC9073E1850659E00A74F2E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8AC9073C1850659E00A74F2E /* InfoPlist.strings */; };
 		8AC907401850659E00A74F2E /* PulsingHaloDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9073F1850659E00A74F2E /* PulsingHaloDemoTests.m */; };
 		8AC9074C185065DB00A74F2E /* PulsingHaloLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9074B185065DB00A74F2E /* PulsingHaloLayer.m */; };
+		FBB13471196A7775001DBCB7 /* MultiplePulsingHaloLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB13470196A7775001DBCB7 /* MultiplePulsingHaloLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		8AC9073F1850659E00A74F2E /* PulsingHaloDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PulsingHaloDemoTests.m; sourceTree = "<group>"; };
 		8AC9074A185065DB00A74F2E /* PulsingHaloLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PulsingHaloLayer.h; sourceTree = "<group>"; };
 		8AC9074B185065DB00A74F2E /* PulsingHaloLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PulsingHaloLayer.m; sourceTree = "<group>"; };
+		FBB1346F196A7775001DBCB7 /* MultiplePulsingHaloLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiplePulsingHaloLayer.h; sourceTree = "<group>"; };
+		FBB13470196A7775001DBCB7 /* MultiplePulsingHaloLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiplePulsingHaloLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +164,8 @@
 			children = (
 				8AC9074A185065DB00A74F2E /* PulsingHaloLayer.h */,
 				8AC9074B185065DB00A74F2E /* PulsingHaloLayer.m */,
+				FBB1346F196A7775001DBCB7 /* MultiplePulsingHaloLayer.h */,
+				FBB13470196A7775001DBCB7 /* MultiplePulsingHaloLayer.m */,
 			);
 			path = PulsingHalo;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AC9074C185065DB00A74F2E /* PulsingHaloLayer.m in Sources */,
+				FBB13471196A7775001DBCB7 /* MultiplePulsingHaloLayer.m in Sources */,
 				8AC9072B1850659E00A74F2E /* ViewController.m in Sources */,
 				8AC907251850659E00A74F2E /* AppDelegate.m in Sources */,
 				8AC907211850659E00A74F2E /* main.m in Sources */,
@@ -395,6 +401,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PulsingHaloDemo/PulsingHaloDemo-Prefix.pch";
 				INFOPLIST_FILE = "PulsingHaloDemo/PulsingHaloDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -408,6 +415,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PulsingHaloDemo/PulsingHaloDemo-Prefix.pch";
 				INFOPLIST_FILE = "PulsingHaloDemo/PulsingHaloDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -474,6 +482,7 @@
 				8AC907451850659E00A74F2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8AC907461850659E00A74F2E /* Build configuration list for PBXNativeTarget "PulsingHaloDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +491,7 @@
 				8AC907481850659E00A74F2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
