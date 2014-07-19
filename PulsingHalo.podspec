@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.license      = 'MIT'
   s.author       = { "shu223" => "shuichi0526@gmail.com" }
   s.platform     = :ios
-  s.source       = { :git => "https://github.com/shu223/PulsingHalo.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/shu223/PulsingHalo.git", :tag => "0.0.4" }
   s.source_files  = 'PulsingHalo/*.{h,m}'
   s.framework  = 'QuartzCore'
   s.requires_arc = true
