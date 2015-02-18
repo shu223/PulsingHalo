@@ -72,7 +72,6 @@
 
 - (void)setupAnimationGroup {
     
-    
     self.animationGroup = [CAAnimationGroup animation];
     self.animationGroup.duration = self.animationDuration + self.pulseInterval;
     self.animationGroup.repeatCount = self.repeatCount;
@@ -96,6 +95,17 @@
     NSArray *animations = @[scaleAnimation, opacityAnimation];
     
     self.animationGroup.animations = animations;
+    self.animationGroup.delegate = self;
+}
+
+
+// =============================================================================
+#pragma mark - CAAnimation Delegate
+
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
+
+    [self removeAllAnimations];
+    [self removeFromSuperlayer];
 }
 
 @end
