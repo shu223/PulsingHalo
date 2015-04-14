@@ -17,6 +17,7 @@
 
 
 @implementation PulsingHaloLayer
+@dynamic repeatCount;
 
 - (id)initWithRepeatCount:(float) repeatCount
 {
