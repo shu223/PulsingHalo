@@ -105,8 +105,10 @@
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
 
-    [self removeAllAnimations];
-    [self removeFromSuperlayer];
+	if (flag) {
+        [self removeAllAnimations];
+        [self removeFromSuperlayer];
+	}
 }
 
 @end
