@@ -34,9 +34,12 @@
 }
 
 - (void)setHaloLayerColor:(CGColorRef)backgroundColor {
-    _haloLayerColor = CGColorRetain(backgroundColor);
-    for (PulsingHaloLayer *layer in self.sublayers) {
-        layer.backgroundColor = backgroundColor;
+    if (_haloLayerColor != backgroundColor) {
+        CGColorRelease(_haloLayerColor);
+        _haloLayerColor = CGColorRetain(backgroundColor);
+        for (PulsingHaloLayer *layer in self.sublayers) {
+            layer.backgroundColor = backgroundColor;
+        }
     }
 }
 
