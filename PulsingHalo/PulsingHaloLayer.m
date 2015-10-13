@@ -12,6 +12,7 @@
 
 
 @interface PulsingHaloLayer ()
+@property (nonatomic, strong) CALayer *effect;
 @property (nonatomic, strong) CAAnimationGroup *animationGroup;
 @end
 
@@ -19,33 +20,28 @@
 @implementation PulsingHaloLayer
 @dynamic repeatCount;
 
-- (id)initWithRepeatCount:(float) repeatCount
+- (instancetype)initWithRepeatCount:(float) repeatCount
 {
     self = [super init];
     if (self) {
-        self.contentsScale = [UIScreen mainScreen].scale;
-        self.opacity = 0;
-        
-        // default
-        self.radius = 60;
-        self.fromValueForRadius = 0.0;
-        self.fromValueForAlpha = 0.45;
-        self.keyTimeForHalfOpacity = 0.2;
-        self.animationDuration = 3;
-        self.pulseInterval = 0;
         self.repeatCount = repeatCount;
-        self.backgroundColor = [[UIColor colorWithRed:0.000 green:0.478 blue:1.000 alpha:1] CGColor];
-        self.useTimingFunction = YES;
+        
+        self.effect = [CALayer new];
+        self.effect.contentsScale = [UIScreen mainScreen].scale;
+        self.effect.opacity = 0;
+        [self addSublayer:self.effect];
+        
+        [self _setupProperties];
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
             
-            [self setupAnimationGroup];
+            [self _setupAnimationGroup];
             
             if(self.pulseInterval != INFINITY) {
                 
                 dispatch_async(dispatch_get_main_queue(), ^(void) {
                     
-                    [self addAnimation:self.animationGroup forKey:@"pulse"];
+                    [self.effect addAnimation:self.animationGroup forKey:@"pulse"];
                 });
             }
         });
@@ -54,32 +50,91 @@
     
 }
 
-- (id)init {
+- (instancetype)initWithLayerNumber:(NSInteger)layerNumber {
+    self = [self initWithRepeatCount:INFINITY];
+    if (self) {
+        self.haloLayerNumber = layerNumber;
+    }
+    return self;
+}
+
+- (instancetype)init {
     return [self initWithRepeatCount:INFINITY];
+}
+
+// =============================================================================
+#pragma mark - Accessor
+
+- (void)setFrame:(CGRect)frame {
+    
+    [super setFrame:frame];
+    self.effect.frame = frame;
+}
+
+- (void)setBackgroundColor:(CGColorRef)backgroundColor {
+    
+    [super setBackgroundColor:backgroundColor];
+    self.effect.backgroundColor = backgroundColor;
 }
 
 - (void)setRadius:(CGFloat)radius {
     
     _radius = radius;
     
-    CGPoint tempPos = self.position;
-    
     CGFloat diameter = self.radius * 2;
     
-    self.bounds = CGRectMake(0, 0, diameter, diameter);
-    self.cornerRadius = self.radius;
-    self.position = tempPos;
+    self.effect.bounds = CGRectMake(0, 0, diameter, diameter);
+    self.effect.cornerRadius = self.radius;
 }
 
-- (void)setupAnimationGroup {
+- (void)setPulseInterval:(NSTimeInterval)pulseInterval {
     
-    self.animationGroup = [CAAnimationGroup animation];
-    self.animationGroup.duration = self.animationDuration + self.pulseInterval;
-    self.animationGroup.repeatCount = self.repeatCount;
-    self.animationGroup.removedOnCompletion = NO;
+    _pulseInterval = pulseInterval;
+    
+    if (_pulseInterval == INFINITY) {
+        [self.effect removeAnimationForKey:@"pulse"];
+    }
+}
+
+- (void)setHaloLayerNumber:(NSInteger)haloLayerNumber {
+    
+    _haloLayerNumber = haloLayerNumber;
+    self.instanceCount = haloLayerNumber;
+    self.instanceDelay = (self.animationDuration + self.pulseInterval) / haloLayerNumber;
+}
+
+- (void)setStartInterval:(NSTimeInterval)startInterval {
+    
+    _startInterval = startInterval;
+    self.instanceDelay = startInterval;
+}
+
+// =============================================================================
+#pragma mark - private
+
+- (void)_setupProperties {
+    _fromValueForRadius = 0.0;
+    _fromValueForAlpha = 0.45;
+    _keyTimeForHalfOpacity = 0.2;
+    _animationDuration = 3;
+    _pulseInterval = 0;
+    _useTimingFunction = YES;
+    
+    self.radius = 60;
+    self.haloLayerNumber = 1;
+    self.startInterval = 1;
+    self.backgroundColor = [[UIColor colorWithRed:0.000 green:0.478 blue:1.000 alpha:1] CGColor];
+}
+
+- (void)_setupAnimationGroup {
+    
+    CAAnimationGroup *animationGroup = [CAAnimationGroup animation];
+    animationGroup.duration = self.animationDuration + self.pulseInterval;
+    animationGroup.repeatCount = self.repeatCount;
+    animationGroup.removedOnCompletion = NO;
     if (self.useTimingFunction) {
         CAMediaTimingFunction *defaultCurve = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault];
-        self.animationGroup.timingFunction = defaultCurve;
+        animationGroup.timingFunction = defaultCurve;
     }
     
     CABasicAnimation *scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale.xy"];
@@ -95,20 +150,9 @@
     
     NSArray *animations = @[scaleAnimation, opacityAnimation];
     
-    self.animationGroup.animations = animations;
-    self.animationGroup.delegate = self;
-}
-
-
-// =============================================================================
-#pragma mark - CAAnimation Delegate
-
-- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
-
-	if (flag) {
-        [self removeAllAnimations];
-        [self removeFromSuperlayer];
-	}
+    animationGroup.animations = animations;
+    
+    self.animationGroup = animationGroup;
 }
 
 @end
