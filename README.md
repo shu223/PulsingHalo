@@ -25,11 +25,16 @@ halo.position = self.view.center;
 
 ####Multiple halos
 ````
-//you can specify the number of halos by initial method or by instance property "haloLayerNumber"
-MultiplePulsingHaloLayer *multiLayer = [[MultiplePulsingHaloLayer alloc] initWithHaloLayerNum:3 andStartInterval:1];
-multiLayer.position = self.view.center;
-[multiLayer buildSublayers];
-[self.view.layer addSublayer:multiLayer];
+// initializer
+PulsingHaloLayer *halo = [[PulsingHaloLayer alloc] initWithLayerNumber:3];
+halo.position = self.view.center;
+[self.view.layer addSublayer:halo];
+
+// property
+PulsingHaloLayer *halo = [PulsingHaloLayer layer];
+halo.haloLayerNumber = 3;
+halo.position = self.view.center;
+[self.view.layer addSublayer:halo];
 ````
 
 ##Install with CocoaPods
