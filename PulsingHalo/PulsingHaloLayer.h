@@ -12,7 +12,7 @@
 #import <QuartzCore/QuartzCore.h>
 
 
-@interface PulsingHaloLayer : CALayer
+@interface PulsingHaloLayer : CAReplicatorLayer
 
 /**
  *	The default value of this property is @c 60pt.
@@ -60,6 +60,20 @@
  */
 @property (nonatomic, assign) BOOL useTimingFunction;
 
-- (id)initWithRepeatCount:(float)repeatCount;
+/**
+ *	The default value of this property is @c 1.
+ */
+@property (nonatomic, assign) NSInteger haloLayerNumber;
+
+/**
+ *	The animation delay in seconds.
+ *
+ *	The default value of this property is @c 1.
+ */
+@property (nonatomic, assign) NSTimeInterval startInterval;
+
+- (instancetype)initWithRepeatCount:(float)repeatCount;
+
+- (instancetype)initWithLayerNumber:(NSInteger)layerNumber;
 
 @end
