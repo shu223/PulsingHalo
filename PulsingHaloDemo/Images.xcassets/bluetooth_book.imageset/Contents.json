@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "bluetooth_book.pdf",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "IPhone_5s.png",
       "scale" : "2x"
     },
     {

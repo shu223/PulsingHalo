@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A76D79E1BD4CC6B00C3881D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A76D79D1BD4CC6B00C3881D /* Launch Screen.storyboard */; settings = {ASSET_TAGS = (); }; };
 		8AC907151850659E00A74F2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC907141850659E00A74F2E /* Foundation.framework */; };
 		8AC907171850659E00A74F2E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC907161850659E00A74F2E /* CoreGraphics.framework */; };
 		8AC907191850659E00A74F2E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC907181850659E00A74F2E /* UIKit.framework */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8A76D79D1BD4CC6B00C3881D /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		8AC907111850659E00A74F2E /* PulsingHaloDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PulsingHaloDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AC907141850659E00A74F2E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8AC907161850659E00A74F2E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -116,13 +118,14 @@
 		8AC9071A1850659E00A74F2E /* PulsingHaloDemo */ = {
 			isa = PBXGroup;
 			children = (
+				8AC9071B1850659E00A74F2E /* Supporting Files */,
+				8AC9072C1850659E00A74F2E /* Images.xcassets */,
+				8AC907261850659E00A74F2E /* Main.storyboard */,
+				8A76D79D1BD4CC6B00C3881D /* Launch Screen.storyboard */,
 				8AC907231850659E00A74F2E /* AppDelegate.h */,
 				8AC907241850659E00A74F2E /* AppDelegate.m */,
-				8AC907261850659E00A74F2E /* Main.storyboard */,
 				8AC907291850659E00A74F2E /* ViewController.h */,
 				8AC9072A1850659E00A74F2E /* ViewController.m */,
-				8AC9072C1850659E00A74F2E /* Images.xcassets */,
-				8AC9071B1850659E00A74F2E /* Supporting Files */,
 			);
 			path = PulsingHaloDemo;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			files = (
 				8AC9072D1850659E00A74F2E /* Images.xcassets in Resources */,
 				8AC9071F1850659E00A74F2E /* InfoPlist.strings in Resources */,
+				8A76D79E1BD4CC6B00C3881D /* Launch Screen.storyboard in Resources */,
 				8AC907281850659E00A74F2E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,7 +398,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PulsingHaloDemo/PulsingHaloDemo-Prefix.pch";
 				INFOPLIST_FILE = "PulsingHaloDemo/PulsingHaloDemo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "Shuichi-Tsutsumi.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -409,7 +413,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PulsingHaloDemo/PulsingHaloDemo-Prefix.pch";
 				INFOPLIST_FILE = "PulsingHaloDemo/PulsingHaloDemo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "Shuichi-Tsutsumi.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

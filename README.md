@@ -1,58 +1,55 @@
 PulsingHalo
 ===========
 
-iOS Component For Creating A Pulsing Animation. It allows you to create single halo or multiple halos.
+iOS Component For Creating a Pulsing animation. It allows you to create halos.
 
-![](http://f.cl.ly/items/2Q0X052p2m371m0w2O0C/halogif.gif "single halo | multiple halos")
+![](demo.gif)
                     
 Great For:
 
-- **Beacons for iBeacon**
+- **Pulses of beacons (iBeacon)**
 - Map Annotations
 
 
 ##How to use
 
 1. Add PulsingHaloLayer.h,m into your project
-2. Initiate and add to your view.
+2. **Just initiate and add to your view layer**.
 
-####Single halo
 ````
 PulsingHaloLayer *halo = [PulsingHaloLayer layer];
 halo.position = self.view.center;
 [self.view.layer addSublayer:halo];
 ````
 
-####Multiple halos
-````
-// initializer
-PulsingHaloLayer *halo = [[PulsingHaloLayer alloc] initWithLayerNumber:3];
-halo.position = self.view.center;
-[self.view.layer addSublayer:halo];
+###Install with CocoaPods
 
-// property
-PulsingHaloLayer *halo = [PulsingHaloLayer layer];
-halo.haloLayerNumber = 3;
-halo.position = self.view.center;
-[self.view.layer addSublayer:halo];
-````
-
-##Install with CocoaPods
-
-Add Podfile.
+Edit your Podfile.
 
 ````
 pod "PulsingHalo"
 ````
 
-And
-
-````
-$ pod install
-````
+And `$ pod install`
 
 
 ##Customization
+
+###Number of Halos
+
+Use `haloLayerNumber` property.
+
+```
+halo.haloLayerNumber = 3;
+```
+
+Or you can use `initWithLayerNumber:`.
+
+````
+PulsingHaloLayer *halo = [[PulsingHaloLayer alloc] initWithLayerNumber:3];
+halo.position = self.view.center;
+[self.view.layer addSublayer:halo];
+````
 
 ###radius
 
@@ -95,8 +92,6 @@ Use property `useTimingFunction`
 ##Demo
 
 You can try to change the radius and color properties with demo app.
-
-![](http://f.cl.ly/items/0u3c211i2g372c390p44/halodemo.jpg)
 
 
 ##Special Thanks

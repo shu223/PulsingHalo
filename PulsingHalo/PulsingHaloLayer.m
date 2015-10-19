@@ -62,6 +62,7 @@
     return [self initWithRepeatCount:INFINITY];
 }
 
+
 // =============================================================================
 #pragma mark - Accessor
 
@@ -109,8 +110,21 @@
     self.instanceDelay = startInterval;
 }
 
+- (void)setAnimationDuration:(NSTimeInterval)animationDuration {
+    
+    _animationDuration = animationDuration;
+    self.animationGroup.duration = animationDuration + self.pulseInterval;
+    for (CAAnimation *anAnimation in self.animationGroup.animations) {
+        anAnimation.duration = animationDuration;
+    }
+    [self.effect removeAllAnimations];
+    [self.effect addAnimation:self.animationGroup forKey:@"pulse"];
+    self.instanceDelay = (self.animationDuration + self.pulseInterval) / self.haloLayerNumber;
+}
+
+
 // =============================================================================
-#pragma mark - private
+#pragma mark - Private
 
 - (void)_setupProperties {
     _fromValueForRadius = 0.0;
@@ -123,7 +137,7 @@
     self.radius = 60;
     self.haloLayerNumber = 1;
     self.startInterval = 1;
-    self.backgroundColor = [[UIColor colorWithRed:0.000 green:0.478 blue:1.000 alpha:1] CGColor];
+    self.backgroundColor = [[UIColor colorWithRed:0.000 green:0.455 blue:0.756 alpha:1] CGColor];
 }
 
 - (void)_setupAnimationGroup {
