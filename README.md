@@ -3,7 +3,7 @@ PulsingHalo
 
 iOS Component For Creating a Pulsing animation. It allows you to create halos.
 
-![](demo.gif)
+![](demo_.gif)
                     
 Great For:
 
