@@ -10,19 +10,9 @@ Great For:
 - **Pulses of beacons (iBeacon)**
 - Map Annotations
 
+##Installation
 
-##How to use
-
-1. Add PulsingHaloLayer.h,m into your project
-2. **Just initiate and add to your view layer**.
-
-````
-PulsingHaloLayer *halo = [PulsingHaloLayer layer];
-halo.position = self.view.center;
-[self.view.layer addSublayer:halo];
-````
-
-###Install with CocoaPods
+###CocoaPods
 
 Edit your Podfile.
 
@@ -32,8 +22,36 @@ pod "PulsingHalo"
 
 And `$ pod install`
 
+###Manual
 
-##Customization
+Add PulsingHaloLayer.h,m into your project.
+
+##How to use
+
+Just **initiate and add** to your view layer.
+
+###Swift
+
+```swift.SomeViewController.swift
+let halo = PulsingHaloLayer()
+halo.position = view.center
+view.layer.addSublayer(halo)
+halo.start()
+```
+
+###Objective-C
+
+```objc:SomeViewController.m
+PulsingHaloLayer *halo = [PulsingHaloLayer layer];
+halo.position = self.view.center;
+[self.view.layer addSublayer:halo];
+[halo start];
+```
+
+
+
+
+##Customizations
 
 ###Number of Halos
 
@@ -42,14 +60,6 @@ Use `haloLayerNumber` property.
 ```
 halo.haloLayerNumber = 3;
 ```
-
-Or you can use `initWithLayerNumber:`.
-
-````
-PulsingHaloLayer *halo = [[PulsingHaloLayer alloc] initWithLayerNumber:3];
-halo.position = self.view.center;
-[self.view.layer addSublayer:halo];
-````
 
 ###radius
 
