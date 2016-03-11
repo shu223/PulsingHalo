@@ -44,12 +44,13 @@
     [self.beaconView.superview.layer insertSublayer:self.halo below:self.beaconView.layer];
     
     [self setupInitialValues];
+    
+    [self.halo start];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)viewDidLayoutSubviews
