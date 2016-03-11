@@ -14,13 +14,24 @@ Great For:
 
 ###CocoaPods
 
-Edit your Podfile.
+Add into your Podfile.
 
 ````
 pod "PulsingHalo"
 ````
 
-And `$ pod install`
+Then `$ pod install`
+
+###Carthage
+
+Add into your Cartfile.
+
+```
+github "shu223/PulsingHalo"
+```
+
+Then `$ carthage update`
+
 
 ###Manual
 
