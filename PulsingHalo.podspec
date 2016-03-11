@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "PulsingHalo"
-  s.version      = "0.0.6"
+  s.version      = "0.1.0"
   s.summary      = "iOS Component For Creating A Pulsing Animation Great For Map Annotations And Beacons"
   s.homepage     = "https://github.com/shu223/PulsingHalo"
   s.license      = 'MIT'
