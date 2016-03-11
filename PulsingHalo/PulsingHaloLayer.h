@@ -72,8 +72,7 @@
  */
 @property (nonatomic, assign) NSTimeInterval startInterval;
 
-- (instancetype)initWithRepeatCount:(float)repeatCount;
 
-- (instancetype)initWithLayerNumber:(NSInteger)layerNumber;
+- (void)start;
 
 @end
