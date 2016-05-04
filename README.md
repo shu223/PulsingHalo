@@ -126,3 +126,15 @@ You can try to change the radius and color properties with demo app.
 
 Inspired by [SVPulsingAnnotationView](https://github.com/samvermette/SVPulsingAnnotationView).
 
+##Author
+
+**Shuichi Tsutsumi**
+
+iOS freelancer in Japan. Welcome works from abroad!
+
+- PAST WORKS:  [My Profile Summary](https://medium.com/@shu223/my-profile-summary-f14bfc1e7099#.vdh0i7clr)
+- PROFILES: [LinkedIn](https://www.linkedin.com/profile/view?id=214896557)
+- BLOG: [English](https://medium.com/@shu223/) / [Japanese](http://d.hatena.ne.jp/shu223/)
+- CONTACTS:
+  - [Twitter](https://twitter.com/shu223)
+  - [Facebook](https://www.facebook.com/shuichi.tsutsumi)
