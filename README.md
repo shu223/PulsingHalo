@@ -1,6 +1,13 @@
 PulsingHalo
 ===========
 
+**PulsingHalo has been discontinued, and is no longer being maintained.** Please check out **[Pulsator](https://github.com/shu223/Pulsator)** which is the new version of this written with Swift.
+
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Badge w/ Version](http://cocoapod-badges.herokuapp.com/v/PulsingHalo/badge.png)](http://cocoadocs.org/docsets/PulsingHalo)
+[![License](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat
+)](http://mit-license.org)
+
 iOS component for creating a pulsing animation. It allows you to create halos.
 
 ![](demo_.gif)
