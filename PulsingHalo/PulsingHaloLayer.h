@@ -51,11 +51,6 @@
 @property (nonatomic, assign) NSTimeInterval pulseInterval;
 
 /**
- *	The default value of this property is @c INFINITY.
- */
-@property (nonatomic, assign) float repeatCount;
-
-/**
  *	The default value of this property is @c YES.
  */
 @property (nonatomic, assign) BOOL useTimingFunction;

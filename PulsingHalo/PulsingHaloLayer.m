@@ -93,6 +93,10 @@
     self.instanceDelay = (self.animationDuration + self.pulseInterval) / self.haloLayerNumber;
 }
 
+- (void)setRepeatCount:(float)repeatCount {
+    self.animationGroup.repeatCount = repeatCount;
+}
+
 
 // =============================================================================
 #pragma mark - Private
