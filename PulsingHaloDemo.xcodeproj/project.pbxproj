@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		8A76D79E1BD4CC6B00C3881D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A76D79D1BD4CC6B00C3881D /* Launch Screen.storyboard */; };
 		8AB7E7DC1C92DD87009A3BB6 /* PulsingHalo.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AB7E7DB1C92DD87009A3BB6 /* PulsingHalo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8AB7E7E01C92DD87009A3BB6 /* PulsingHalo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB7E7D91C92DD87009A3BB6 /* PulsingHalo.framework */; };
-		8AB7E7E11C92DD87009A3BB6 /* PulsingHalo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB7E7D91C92DD87009A3BB6 /* PulsingHalo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8AB7E80A1C92F6FB009A3BB6 /* PulsingHaloLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9074B185065DB00A74F2E /* PulsingHaloLayer.m */; };
 		8AB7E8121C92FEB1009A3BB6 /* PulsingHaloLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AC9074A185065DB00A74F2E /* PulsingHaloLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8AC907151850659E00A74F2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC907141850659E00A74F2E /* Foundation.framework */; };
@@ -31,13 +29,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8AB7E7DE1C92DD87009A3BB6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8AC907091850659E00A74F2E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8AB7E7D81C92DD87009A3BB6;
-			remoteInfo = PulsingHalo;
-		};
 		8AC907371850659E00A74F2E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8AC907091850659E00A74F2E /* Project object */;
@@ -54,7 +45,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8AB7E7E11C92DD87009A3BB6 /* PulsingHalo.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,7 +94,6 @@
 				8AC907171850659E00A74F2E /* CoreGraphics.framework in Frameworks */,
 				8AC907191850659E00A74F2E /* UIKit.framework in Frameworks */,
 				8AC907151850659E00A74F2E /* Foundation.framework in Frameworks */,
-				8AB7E7E01C92DD87009A3BB6 /* PulsingHalo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,7 +242,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				8AB7E7DF1C92DD87009A3BB6 /* PBXTargetDependency */,
 			);
 			name = PulsingHaloDemo;
 			productName = PulsingHaloDemo;
@@ -375,11 +363,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8AB7E7DF1C92DD87009A3BB6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8AB7E7D81C92DD87009A3BB6 /* PulsingHalo */;
-			targetProxy = 8AB7E7DE1C92DD87009A3BB6 /* PBXContainerItemProxy */;
-		};
 		8AC907381850659E00A74F2E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8AC907101850659E00A74F2E /* PulsingHaloDemo */;
