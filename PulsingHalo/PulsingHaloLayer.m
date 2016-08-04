@@ -94,6 +94,7 @@
 }
 
 - (void)setRepeatCount:(float)repeatCount {
+    [super setRepeatCount:repeatCount];
     self.animationGroup.repeatCount = repeatCount;
 }
 
