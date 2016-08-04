@@ -50,7 +50,7 @@ Just **initiate and add** to your view layer.
 
 ###Swift
 
-```swift.SomeViewController.swift
+```swift:SomeViewController.swift
 let halo = PulsingHaloLayer()
 halo.position = view.center
 view.layer.addSublayer(halo)
@@ -75,7 +75,7 @@ halo.position = self.view.center;
 
 Use `haloLayerNumber` property.
 
-```
+```objc
 halo.haloLayerNumber = 3;
 ```
 
@@ -83,7 +83,7 @@ halo.haloLayerNumber = 3;
 
 Use `radius` property.
 
-````
+````objc
 self.halo.radius = 240.0;
 ````
 
@@ -91,7 +91,7 @@ self.halo.radius = 240.0;
 
 Use `backgroundColor` property.
 
-````
+````objc
 UIColor *color = [UIColor colorWithRed:0.7
                                  green:0.9
                                   blue:0.3
@@ -112,9 +112,10 @@ Initialize using `initWithRepeatCount:` method, or set `repeatCount` property. T
 
 ###animation key values and times
 
-Use properties `fromValueForRadius`, `fromValueForAlpha` and `keyTimeForHalfOpacity`.
+Use properties `fromValueForRadius` or `keyTimeForHalfOpacity`.
 
 ###enable/disable timing function for animation
+
 Use property `useTimingFunction`
 
 ##Demo
