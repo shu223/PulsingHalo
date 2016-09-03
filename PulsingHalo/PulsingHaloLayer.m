@@ -11,7 +11,7 @@
 #import "PulsingHaloLayer.h"
 
 
-@interface PulsingHaloLayer ()
+@interface PulsingHaloLayer () <CAAnimationDelegate>
 @property (nonatomic, strong) CALayer *effect;
 @property (nonatomic, strong) CAAnimationGroup *animationGroup;
 @end
