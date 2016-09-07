@@ -10,8 +10,11 @@
 
 #import "PulsingHaloLayer.h"
 
-
+#ifdef __IPHONE_10_0
 @interface PulsingHaloLayer () <CAAnimationDelegate>
+#else
+@interface PulsingHaloLayer ()
+#endif
 @property (nonatomic, strong) CALayer *effect;
 @property (nonatomic, strong) CAAnimationGroup *animationGroup;
 @end
