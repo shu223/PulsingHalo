@@ -37,8 +37,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self setupAnimation];
+}
 
-    // basic setup
+- (void)setupAnimation
+{
     PulsingHaloLayer *layer = [PulsingHaloLayer layer];
     self.halo = layer;
     [self.beaconView.superview.layer insertSublayer:self.halo below:self.beaconView.layer];
@@ -46,6 +50,22 @@
     [self setupInitialValues];
     
     [self.halo start];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:true];
+    
+    // When application enters in background, "animationDidStop" method (from PulsingHaloLayer class) gets called and animation layer is removed from view. We need to add that animation layer again when app enters foreground.
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appEntersForeground) name:UIApplicationWillEnterForegroundNotification object:nil];
+}
+
+- (void)appEntersForeground
+{
+    [self setupAnimation];
+    
+    // Center position animation layer
+    self.halo.position = self.beaconView.center;
 }
 
 - (void)didReceiveMemoryWarning
