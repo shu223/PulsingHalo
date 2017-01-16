@@ -67,6 +67,12 @@
  */
 @property (nonatomic, assign) NSTimeInterval startInterval;
 
+/**
+ *  When this value is true, the halo will be automatically resumed after entering foreground.
+ *
+ *	The default value of this property is YES.
+ */
+@property (nonatomic, assign) BOOL shouldResume;
 
 - (void)start;
 

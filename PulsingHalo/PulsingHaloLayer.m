@@ -70,11 +70,8 @@
 }
 
 - (void)onWillEnterForeground:(NSNotification *)notification {
-    NSLog(@"effect:%@, superlayer:%@, effect.superlayer:%@", self.effect, self.superlayer, self.effect.superlayer);
-    [self addSublayer:self.effect];
-    [self.prevSuperlayer insertSublayer:self atIndex:self.prevLayerIndex];
-    if (self.prevAnimation) {
-        [self.effect addAnimation:self.prevAnimation forKey:@"pulse"];
+    if (self.shouldResume) {
+        [self _resume];
     }
 }
 
@@ -97,7 +94,6 @@
 }
 
 - (void)setRadius:(CGFloat)radius {
-    
     _radius = radius;
     
     CGFloat diameter = self.radius * 2;
@@ -107,7 +103,6 @@
 }
 
 - (void)setPulseInterval:(NSTimeInterval)pulseInterval {
-    
     _pulseInterval = pulseInterval;
     
     if (_pulseInterval == INFINITY) {
@@ -116,20 +111,17 @@
 }
 
 - (void)setHaloLayerNumber:(NSInteger)haloLayerNumber {
-    
     _haloLayerNumber = haloLayerNumber;
     self.instanceCount = haloLayerNumber;
     self.instanceDelay = (self.animationDuration + self.pulseInterval) / haloLayerNumber;
 }
 
 - (void)setStartInterval:(NSTimeInterval)startInterval {
-    
     _startInterval = startInterval;
     self.instanceDelay = startInterval;
 }
 
 - (void)setAnimationDuration:(NSTimeInterval)animationDuration {
-
     _animationDuration = animationDuration;
     
     self.instanceDelay = (self.animationDuration + self.pulseInterval) / self.haloLayerNumber;
@@ -145,6 +137,7 @@
 #pragma mark - Private
 
 - (void)_setupDefaults {
+    _shouldResume = YES;
     _fromValueForRadius = 0.0;
     _keyTimeForHalfOpacity = 0.2;
     _animationDuration = 3;
@@ -159,7 +152,6 @@
 }
 
 - (void)_setupAnimationGroup {
-    
     CAAnimationGroup *animationGroup = [CAAnimationGroup animation];
     animationGroup.duration = self.animationDuration + self.pulseInterval;
     animationGroup.repeatCount = self.repeatCount;
@@ -187,12 +179,19 @@
     self.animationGroup.delegate = self;
 }
 
+- (void)_resume {
+    [self addSublayer:self.effect];
+    [self.prevSuperlayer insertSublayer:self atIndex:self.prevLayerIndex];
+    if (self.prevAnimation) {
+        [self.effect addAnimation:self.prevAnimation forKey:@"pulse"];
+    }
+}
+
 
 // =============================================================================
 #pragma mark - CAAnimationDelegate
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
-
     if ([self.effect.animationKeys count]) {
         [self.effect removeAllAnimations];
     }
