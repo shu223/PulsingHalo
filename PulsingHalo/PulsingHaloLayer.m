@@ -17,6 +17,11 @@
 #endif
 @property (nonatomic, strong) CALayer *effect;
 @property (nonatomic, strong) CAAnimationGroup *animationGroup;
+
+// for resume
+@property (nonatomic, weak) CALayer *prevSuperlayer;
+@property (nonatomic, assign) unsigned int prevLayerIndex;
+@property (nonatomic, strong) CAAnimation *prevAnimation;
 @end
 
 
@@ -27,17 +32,51 @@
 {
     self = [super init];
     if (self) {
-        
         self.effect = [CALayer new];
         self.effect.contentsScale = [UIScreen mainScreen].scale;
         self.effect.opacity = 0;
         [self addSublayer:self.effect];
         
         [self _setupDefaults];
+
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(onDidEnterBackground:)
+                                                     name:UIApplicationDidEnterBackgroundNotification object:nil];
+
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(onWillEnterForeground:)
+                                                     name:UIApplicationWillEnterForegroundNotification object:nil];
     }
     return self;
 }
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)onDidEnterBackground:(NSNotification *)notification {
+    self.prevSuperlayer = self.superlayer;
+    if (self.prevSuperlayer) {
+        unsigned int layerIndex = 0;
+        for (CALayer *aSublayer in self.superlayer.sublayers) {
+            if (aSublayer == self) {
+                self.prevLayerIndex = layerIndex;
+                break;
+            }
+            layerIndex++;
+        }
+    }
+    self.prevAnimation = [self.effect animationForKey:@"pulse"];
+}
+
+- (void)onWillEnterForeground:(NSNotification *)notification {
+    NSLog(@"effect:%@, superlayer:%@, effect.superlayer:%@", self.effect, self.superlayer, self.effect.superlayer);
+    [self addSublayer:self.effect];
+    [self.prevSuperlayer insertSublayer:self atIndex:self.prevLayerIndex];
+    if (self.prevAnimation) {
+        [self.effect addAnimation:self.prevAnimation forKey:@"pulse"];
+    }
+}
 
 // =============================================================================
 #pragma mark - Accessor
