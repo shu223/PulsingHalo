@@ -17,19 +17,21 @@ Great For:
 - **Pulses of beacons (iBeacon)**
 - Map Annotations
 
-##Installation
 
-###CocoaPods
+## Installation
+
+### CocoaPods
 
 Add into your Podfile.
 
-````
+```
 pod "PulsingHalo"
-````
+```
 
 Then `$ pod install`
 
-###Carthage
+
+### Carthage
 
 Add into your Cartfile.
 
@@ -40,15 +42,15 @@ github "shu223/PulsingHalo"
 Then `$ carthage update`
 
 
-###Manual
+### Manual
 
 Add PulsingHaloLayer.h,m into your project.
 
-##How to use
+## How to use
 
 Just **initiate and add** to your view layer.
 
-###Swift
+### Swift
 
 ```swift:SomeViewController.swift
 let halo = PulsingHaloLayer()
@@ -57,7 +59,7 @@ view.layer.addSublayer(halo)
 halo.start()
 ```
 
-###Objective-C
+### Objective-C
 
 ```objc:SomeViewController.m
 PulsingHaloLayer *halo = [PulsingHaloLayer layer];
@@ -69,9 +71,9 @@ halo.position = self.view.center;
 
 
 
-##Customizations
+## Customizations
 
-###Number of Halos
+### Number of Halos
 
 Use `haloLayerNumber` property.
 
@@ -79,55 +81,55 @@ Use `haloLayerNumber` property.
 halo.haloLayerNumber = 3;
 ```
 
-###radius
+### radius
 
 Use `radius` property.
 
-````objc
+```objc
 self.halo.radius = 240.0;
-````
+```
 
-###color
+### color
 
 Use `backgroundColor` property.
 
-````objc
+```objc
 UIColor *color = [UIColor colorWithRed:0.7
                                  green:0.9
                                   blue:0.3
                                  alpha:1.0];
 
 self.halo.backgroundColor = color.CGColor;
-````
+```
 
-###animation duration
+### animation duration
 
 Use `animationDuration` or `pulseInterval` property.
 
 
-###animation repeat count
+### animation repeat count
 
 Initialize using `initWithRepeatCount:` method, or set `repeatCount` property. The default value is `INFINITY`.
 
 
-###animation key values and times
+### animation key values and times
 
 Use properties `fromValueForRadius` or `keyTimeForHalfOpacity`.
 
-###enable/disable timing function for animation
+### enable/disable timing function for animation
 
 Use property `useTimingFunction`
 
-##Demo
+## Demo
 
 You can try to change the radius and color properties with demo app.
 
 
-##Special Thanks
+## Special Thanks
 
 Inspired by [SVPulsingAnnotationView](https://github.com/samvermette/SVPulsingAnnotationView).
 
-##Author
+## Author
 
 **Shuichi Tsutsumi**
 
