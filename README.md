@@ -52,7 +52,7 @@ Just **initiate and add** to your view layer.
 
 ### Swift
 
-```swift:SomeViewController.swift
+```swift
 let halo = PulsingHaloLayer()
 halo.position = view.center
 view.layer.addSublayer(halo)
@@ -61,7 +61,7 @@ halo.start()
 
 ### Objective-C
 
-```objc:SomeViewController.m
+```objc
 PulsingHaloLayer *halo = [PulsingHaloLayer layer];
 halo.position = self.view.center;
 [self.view.layer addSublayer:halo];
