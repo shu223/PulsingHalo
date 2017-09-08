@@ -19,7 +19,7 @@
 @property (nonatomic, strong) CAAnimationGroup *animationGroup;
 
 // for resume
-@property (nonatomic, weak) CALayer *prevSuperlayer;
+@property (nonatomic, assign) CALayer *prevSuperlayer;
 @property (nonatomic, assign) unsigned int prevLayerIndex;
 @property (nonatomic, strong) CAAnimation *prevAnimation;
 @end
