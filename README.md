@@ -136,7 +136,7 @@ Inspired by [SVPulsingAnnotationView](https://github.com/samvermette/SVPulsingAn
 iOS freelancer in Japan. Welcome works from abroad!
 
 - PAST WORKS:  [My Profile Summary](https://medium.com/@shu223/my-profile-summary-f14bfc1e7099#.vdh0i7clr)
-- PROFILES: [LinkedIn](https://www.linkedin.com/profile/view?id=214896557)
+- PROFILES: [LinkedIn](https://www.linkedin.com/in/shuichi-tsutsumi-525b755b/)
 - BLOG: [English](https://medium.com/@shu223/) / [Japanese](http://d.hatena.ne.jp/shu223/)
 - CONTACTS:
   - [Twitter](https://twitter.com/shu223)
