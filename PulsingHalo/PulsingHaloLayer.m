@@ -93,6 +93,16 @@
     self.effect.frame = frame;
 }
 
+- (void)setBorderWidth:(CGFloat)borderWidth {
+    [super setBorderWidth:borderWidth];
+    self.effect.borderWidth = borderWidth;
+}
+
+- (void)setBorderColor:(CGColorRef)borderColor {
+    [super setBorderColor:borderColor];
+    self.effect.borderColor = borderColor;
+}
+
 - (void)setBackgroundColor:(CGColorRef)backgroundColor {
     [super setBackgroundColor:backgroundColor];
     self.effect.backgroundColor = backgroundColor;
