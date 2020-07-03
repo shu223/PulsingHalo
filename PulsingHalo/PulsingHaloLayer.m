@@ -83,6 +83,11 @@
     [self.effect addAnimation:self.animationGroup forKey:@"pulse"];
 }
 
+- (void)stop {
+    [self removeAllAnimations];
+    self.animationGroup.delegate = nil;
+}
+
 - (void)setFrame:(CGRect)frame {
     [super setFrame:frame];
     self.effect.frame = frame;

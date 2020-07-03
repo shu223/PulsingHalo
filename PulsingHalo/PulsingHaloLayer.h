@@ -75,5 +75,6 @@
 @property (nonatomic, assign) BOOL shouldResume;
 
 - (void)start;
+- (void)stop;
 
 @end
